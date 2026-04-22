@@ -544,6 +544,8 @@ footer {
   .holo-metrics { grid-template-columns:1fr; }
 }
 </style>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
 
@@ -825,10 +827,22 @@ footer {
   <div class="cta-glow"></div>
   <h2 class="cta-title reveal">Ready to <span class="g">Build,<br>Optimize & Grow?</span></h2>
   <p class="cta-sub reveal delay1">Let's talk about your goals. Free 30-minute strategy session — no strings attached.</p>
-  <div class="cta-btns reveal delay2">
-    <a href="mailto:dshanmugavel10@gmail.com" class="btn-glow">Book Free Strategy Call →</a>
-    <a href="https://www.instagram.com/dax_solutions_media" class="btn-outline">@dax_solutions_media</a>
-  </div>
+ 
+<div class="cta-btns reveal delay2">
+
+    <button class="btn-glow" onclick="openCalendly()">
+        Book Free Strategy Call →
+    </button>
+
+    <a href="https://wa.me/916369022159" class="btn-outline">
+        Chat on WhatsApp
+    </a>
+
+    <a href="https://www.instagram.com/dax_solutions_media" class="btn-outline">
+        @dax_solutions_media
+    </a>
+
+</div>
 </section>
 
 <!-- FOOTER -->
@@ -846,6 +860,13 @@ footer {
 <!-- THREE.JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
+
+function openCalendly() {
+  Calendly.initPopupWidget({
+    url: 'https://calendly.com/dharshuu1020/30min'
+  });
+}
+
 /* ─── CURSOR ────────────────────────────────── */
 const cur = document.getElementById('cursor');
 const curG = document.getElementById('cursor-glow');
